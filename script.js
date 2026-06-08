@@ -116,7 +116,7 @@ function speakIntro() {
 
     const text =
 
-        "Hello. My name is Hammaad Sayed. I am a Computer Engineering student and an aspiring Full Stack Developer. Welcome to my portfolio website. Please explore my projects, certificates, skills and achievements.";
+        "Hello. My name is Hammaad Imtiyaz Sayed. I am a Computer Engineering student and an aspiring Full Stack Developer. Welcome to my portfolio website. Please explore my projects, certificates, skills and achievements.";
 
     const speech = new SpeechSynthesisUtterance(text);
 

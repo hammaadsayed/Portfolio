@@ -225,6 +225,81 @@ header{
     line-height:1.8;
 }
 
+/* Education */
+
+.education-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+}
+
+.education-card{
+
+    background:rgba(255,255,255,0.05);
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:0.4s;
+}
+
+.education-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.education-icon{
+
+    font-size:40px;
+
+    color:#60a5fa;
+
+    margin-bottom:15px;
+}
+
+.edu-college{
+
+    color:#60a5fa;
+
+    font-weight:600;
+
+    margin:10px 0;
+}
+
+.edu-year{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    color:#94a3b8;
+}
+
+.cgpa-list{
+
+    margin-top:15px;
+}
+
+.cgpa-list p{
+
+    background:rgba(255,255,255,0.08);
+
+    padding:10px;
+
+    margin:8px 0;
+
+    border-radius:10px;
+
+    color:#cbd5e1;
+}
+
 /* Skills */
 
 .skills-container{
@@ -367,12 +442,27 @@ header{
 }
 
 .project-card{
-    padding:30px;
-    border-radius:20px;
-    background:rgba(255,255,255,0.05);
-    transition:.3s;
+       font-size: 25px;
+    font-weight: 700;
+    color: #60a5fa;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
 }
 
+.project-card p{
+
+    color: #cbd5e1;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-top: 10px;
+
+    margin-bottom: 20px;
+
+    text-align: justify;
+}
 .project-card:hover{
     transform:translateY(-10px);
 }
