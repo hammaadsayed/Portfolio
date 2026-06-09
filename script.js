@@ -1,10 +1,11 @@
-// ==========================
-// LOADER
-// ==========================
+/* ==========================
+   LOADER
+========================== */
 
 window.addEventListener("load", () => {
 
-    const loader = document.getElementById("loader");
+    const loader =
+        document.getElementById("loader");
 
     setTimeout(() => {
 
@@ -20,18 +21,23 @@ window.addEventListener("load", () => {
 
 });
 
-// ==========================
-// AOS ANIMATION
-// ==========================
+
+/* ==========================
+   AOS ANIMATION
+========================== */
 
 AOS.init({
+
     duration: 1000,
+
     once: true
+
 });
 
-// ==========================
-// TYPING EFFECT
-// ==========================
+
+/* ==========================
+   TYPED TEXT
+========================== */
 
 var typed = new Typed(".typing", {
 
@@ -39,86 +45,40 @@ var typed = new Typed(".typing", {
 
         "Computer Engineering Student",
 
-        "Aspiring Full Stack Developer",
+        "Full Stack Developer",
 
         "Web Developer",
 
-        "Problem Solver",
+        "Tech Enthusiast",
 
-        "Tech Enthusiast"
+        "Problem Solver"
 
     ],
 
-    typeSpeed: 70,
+    typeSpeed: 60,
+
     backSpeed: 40,
+
     backDelay: 1500,
+
     loop: true
 
 });
 
-// ==========================
-// ROBOT MESSAGES
-// ==========================
 
-const robotMessages = [
-
-    "👋 Hello! Welcome to my Portfolio.",
-
-    "💻 I am Hammaad Sayed.",
-
-    "🚀 Computer Engineering Student.",
-
-    "🌟 Aspiring Full Stack Developer.",
-
-    "🏆 Byte Battle 2026 Co-Organizer.",
-
-    "📢 GDGC Marketing Team Member.",
-
-    "⚡ Passionate about Technology & Innovation."
-
-];
-
-let currentMessage = 0;
-
-const robotText = document.getElementById("robot-text");
-
-function changeRobotMessage() {
-
-    if (!robotText) return;
-
-    robotText.style.opacity = "0";
-
-    setTimeout(() => {
-
-        robotText.innerHTML = robotMessages[currentMessage];
-
-        robotText.style.opacity = "1";
-
-        currentMessage++;
-
-        if (currentMessage >= robotMessages.length) {
-
-            currentMessage = 0;
-
-        }
-
-    }, 500);
-
-}
-
-setInterval(changeRobotMessage, 3500);
-
-// ==========================
-// ROBOT VOICE INTRO
-// ==========================
+/* ==========================
+   HUMAN VOICE INTRO
+========================== */
 
 function speakIntro() {
 
     const text =
 
-        "Hello. My name is Hammaad Imtiyaz Sayed. I am a Computer Engineering student and an aspiring Full Stack Developer. Welcome to my portfolio website. Please explore my projects, certificates, skills and achievements.";
+        "Hello, I am Hammaad Imtiyaz Sayed. A Computer Engineering student and aspiring Full Stack Developer. I am passionate about web development, software engineering and building innovative digital solutions. Thank you for visiting my portfolio.";
 
-    const speech = new SpeechSynthesisUtterance(text);
+    const speech =
+
+        new SpeechSynthesisUtterance(text);
 
     speech.lang = "en-US";
 
@@ -134,191 +94,12 @@ function speakIntro() {
 
 }
 
-// Auto Speak
 
-window.addEventListener("load", () => {
+/* ==========================
+   CERTIFICATE POPUP
+========================== */
 
-    setTimeout(() => {
-
-        speakIntro();
-
-    }, 2500);
-
-});
-
-// ==========================
-// MOBILE MENU
-// ==========================
-
-const menuBtn = document.querySelector(".menu-btn");
-
-const navLinks = document.querySelector(".nav-links");
-
-if (menuBtn) {
-
-    menuBtn.addEventListener("click", () => {
-
-        navLinks.classList.toggle("mobile-menu");
-
-    });
-
-}
-
-// ==========================
-// ACTIVE NAVBAR LINK
-// ==========================
-
-const sections = document.querySelectorAll("section");
-
-const navItems = document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach(section => {
-
-        const sectionTop = section.offsetTop - 150;
-
-        if (window.scrollY >= sectionTop) {
-
-            current = section.getAttribute("id");
-
-        }
-
-    });
-
-    navItems.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + current) {
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-});
-
-// ==========================
-// NAVBAR BACKGROUND
-// ==========================
-
-window.addEventListener("scroll", () => {
-
-    const navbar = document.querySelector(".navbar");
-
-    if (!navbar) return;
-
-    if (window.scrollY > 50) {
-
-        navbar.style.background =
-            "rgba(15,23,42,0.95)";
-
-        navbar.style.backdropFilter =
-            "blur(20px)";
-
-    } else {
-
-        navbar.style.background =
-            "rgba(255,255,255,0.05)";
-    }
-
-});
-
-// ==========================
-// SCROLL TO TOP BUTTON
-// ==========================
-
-const topBtn = document.createElement("button");
-
-topBtn.innerHTML = "↑";
-
-topBtn.id = "topBtn";
-
-document.body.appendChild(topBtn);
-
-topBtn.style.position = "fixed";
-
-topBtn.style.bottom = "25px";
-
-topBtn.style.right = "25px";
-
-topBtn.style.width = "50px";
-
-topBtn.style.height = "50px";
-
-topBtn.style.border = "none";
-
-topBtn.style.borderRadius = "50%";
-
-topBtn.style.background = "#3b82f6";
-
-topBtn.style.color = "#fff";
-
-topBtn.style.fontSize = "22px";
-
-topBtn.style.cursor = "pointer";
-
-topBtn.style.display = "none";
-
-topBtn.style.zIndex = "999";
-
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 400) {
-
-        topBtn.style.display = "block";
-
-    } else {
-
-        topBtn.style.display = "none";
-
-    }
-
-});
-
-topBtn.addEventListener("click", () => {
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
-    });
-
-});
-
-// ==========================
-// CONTACT FORM
-// ==========================
-
-const contactForm = document.querySelector(".contact-form");
-
-if (contactForm) {
-
-    contactForm.addEventListener("submit", (e) => {
-
-        e.preventDefault();
-
-        alert(
-            "Thank you for contacting me! Your message has been received."
-        );
-
-        contactForm.reset();
-
-    });
-
-}
-
-// ==========================
-// CERTIFICATE HOVER EFFECT
-// ==========================
-
-function openCertificate(src){
+function openCertificate(src) {
 
     document.getElementById(
         "certificateModal"
@@ -327,27 +108,225 @@ function openCertificate(src){
     document.getElementById(
         "modalImage"
     ).src = src;
+
 }
 
-function closeCertificate(){
+function closeCertificate() {
 
     document.getElementById(
         "certificateModal"
     ).style.display = "none";
+
 }
 
-// ==========================
-// CONSOLE MESSAGE
-// ==========================
 
-console.log(`
+/* Close Modal on Outside Click */
 
-===================================
+window.onclick = function (event) {
 
-     HAMMAAD SAYED PORTFOLIO
+    const modal =
+        document.getElementById(
+            "certificateModal"
+        );
 
-===================================
+    if (event.target === modal) {
 
-Portfolio Loaded Successfully 🚀
+        modal.style.display = "none";
 
-`);
+    }
+
+};
+
+
+/* ==========================
+   EMAILJS CONTACT FORM
+========================== */
+
+const contactForm =
+    document.getElementById(
+        "contact-form"
+    );
+
+if (contactForm) {
+
+    contactForm.addEventListener(
+        "submit",
+
+        function (e) {
+
+            e.preventDefault();
+
+            emailjs.sendForm(
+
+                "service_ob9bwlm",
+
+                "template_xjq08zy",
+
+                this
+
+            )
+
+            .then(() => {
+
+                alert(
+                    "Message sent successfully!"
+                );
+
+                contactForm.reset();
+
+            })
+
+            .catch((error) => {
+
+                console.error(
+                    "EmailJS Error:",
+                    error
+                );
+
+                alert(
+                    "Failed to send message!"
+                );
+
+            });
+
+        }
+
+    );
+
+}
+
+/* ==========================
+   MOBILE MENU
+========================== */
+
+const menuBtn =
+
+    document.querySelector(
+        ".menu-btn"
+    );
+
+const navLinks =
+
+    document.querySelector(
+        ".nav-links"
+    );
+
+if (menuBtn) {
+
+    menuBtn.addEventListener(
+
+        "click",
+
+        () => {
+
+            navLinks.classList.toggle(
+                "active"
+            );
+
+        }
+
+    );
+
+}
+
+
+/* ==========================
+   ACTIVE NAV LINK
+========================== */
+
+const sections =
+
+    document.querySelectorAll(
+        "section"
+    );
+
+const navItems =
+
+    document.querySelectorAll(
+        ".nav-links a"
+    );
+
+window.addEventListener(
+
+    "scroll",
+
+    () => {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const sectionTop =
+                section.offsetTop - 150;
+
+            if (
+                pageYOffset >=
+                sectionTop
+            ) {
+
+                current =
+                    section.getAttribute(
+                        "id"
+                    );
+
+            }
+
+        });
+
+        navItems.forEach(link => {
+
+            link.classList.remove(
+                "active"
+            );
+
+            if (
+                link.getAttribute("href")
+                === "#" + current
+            ) {
+
+                link.classList.add(
+                    "active"
+                );
+
+            }
+
+        });
+
+    }
+
+);
+
+
+/* ==========================
+   SMOOTH SCROLL
+========================== */
+
+document.querySelectorAll(
+    'a[href^="#"]'
+).forEach(anchor => {
+
+    anchor.addEventListener(
+
+        "click",
+
+        function (e) {
+
+            e.preventDefault();
+
+            document.querySelector(
+
+                this.getAttribute(
+                    "href"
+                )
+
+            ).scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+    );
+
+});
