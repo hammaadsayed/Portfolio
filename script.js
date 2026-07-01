@@ -1,332 +1,382 @@
-/* ==========================
-   LOADER
-========================== */
+/* ==========================================
+   HAMMAAD PORTFOLIO
+   SCRIPT.JS
+========================================== */
 
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-    const loader =
-        document.getElementById("loader");
+    /* Loader */
 
-    setTimeout(() => {
+    const loader = document.getElementById("loader");
 
-        loader.style.opacity = "0";
+    if (loader) {
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                loader.style.opacity = "0";
+                loader.style.visibility = "hidden";
+            }, 800);
+        });
+    }
 
-        setTimeout(() => {
+    /* AOS */
 
-            loader.style.display = "none";
+    if (typeof AOS !== "undefined") {
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    }
 
-        }, 500);
+    /* Typed JS */
 
-    }, 1500);
+    if (document.getElementById("typing")) {
 
-});
+        new Typed("#typing", {
 
+            strings: [
+                "Computer Engineering Student",
+                "Cybersecurity Enthusiast",
+                "Full Stack Developer",
+                "Cloud Computing Learner",
+                "Open Source Enthusiast"
+            ],
 
-/* ==========================
-   AOS ANIMATION
-========================== */
+            typeSpeed: 70,
+            backSpeed: 40,
+            backDelay: 1500,
+            loop: true
 
-AOS.init({
-
-    duration: 1000,
-
-    once: true
-
-});
-
-
-/* ==========================
-   TYPED TEXT
-========================== */
-
-var typed = new Typed(".typing", {
-
-    strings: [
-
-        "Computer Engineering Student",
-
-        "Full Stack Developer",
-
-        "Web Developer",
-
-        "Tech Enthusiast",
-
-        "Problem Solver"
-
-    ],
-
-    typeSpeed: 60,
-
-    backSpeed: 40,
-
-    backDelay: 1500,
-
-    loop: true
-
-});
-
-
-/* ==========================
-   HUMAN VOICE INTRO
-========================== */
-
-function speakIntro() {
-
-    const text =
-
-        "Hello, I am Hammaad Imtiyaz Sayed. A Computer Engineering student and aspiring Full Stack Developer. I am passionate about web development, software engineering and building innovative digital solutions. Thank you for visiting my portfolio.";
-
-    const speech =
-
-        new SpeechSynthesisUtterance(text);
-
-    speech.lang = "en-US";
-
-    speech.rate = 1;
-
-    speech.pitch = 1;
-
-    speech.volume = 1;
-
-    window.speechSynthesis.cancel();
-
-    window.speechSynthesis.speak(speech);
-
-}
-
-
-/* ==========================
-   CERTIFICATE POPUP
-========================== */
-
-function openCertificate(src) {
-
-    document.getElementById(
-        "certificateModal"
-    ).style.display = "flex";
-
-    document.getElementById(
-        "modalImage"
-    ).src = src;
-
-}
-
-function closeCertificate() {
-
-    document.getElementById(
-        "certificateModal"
-    ).style.display = "none";
-
-}
-
-
-/* Close Modal on Outside Click */
-
-window.onclick = function (event) {
-
-    const modal =
-        document.getElementById(
-            "certificateModal"
-        );
-
-    if (event.target === modal) {
-
-        modal.style.display = "none";
+        });
 
     }
 
-};
+});
 
+/*=========================================
+        STICKY NAVBAR
+=========================================*/
 
-/* ==========================
-   EMAILJS CONTACT FORM
-========================== */
+const navbar = document.querySelector(".navbar");
 
-const contactForm =
-    document.getElementById(
-        "contact-form"
-    );
+window.addEventListener("scroll", () => {
+
+    if (navbar) {
+
+        if (window.scrollY > 60) {
+
+            navbar.classList.add("scrolled");
+
+        } else {
+
+            navbar.classList.remove("scrolled");
+
+        }
+
+    }
+
+});
+
+/*=========================================
+        SCROLL PROGRESS BAR
+=========================================*/
+
+const progressBar = document.getElementById("progressBar");
+
+window.addEventListener("scroll", () => {
+
+    if (!progressBar) return;
+
+    const scrollTop =
+        document.documentElement.scrollTop;
+
+    const scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+    const progress =
+        (scrollTop / scrollHeight) * 100;
+
+    progressBar.style.width = progress + "%";
+
+});
+
+/*=========================================
+        ACTIVE NAVIGATION
+=========================================*/
+
+const sections = document.querySelectorAll("section");
+
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop =
+            section.offsetTop - 120;
+
+        const sectionHeight =
+            section.clientHeight;
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
+
+            current = section.id;
+
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+/*=========================================
+        SMOOTH SCROLL
+=========================================*/
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", function (e) {
+
+        const href = this.getAttribute("href");
+
+        if (href.startsWith("#")) {
+
+            e.preventDefault();
+
+            const target = document.querySelector(href);
+
+            if (target) {
+
+                target.scrollIntoView({
+
+                    behavior: "smooth"
+
+                });
+
+            }
+
+        }
+
+    });
+
+});
+
+/*=========================================
+        SCROLL TO TOP BUTTON
+=========================================*/
+
+const scrollTopBtn = document.getElementById("scrollTop");
+
+window.addEventListener("scroll", () => {
+
+    if (!scrollTopBtn) return;
+
+    if (window.scrollY > 300) {
+
+        scrollTopBtn.style.display = "flex";
+
+    } else {
+
+        scrollTopBtn.style.display = "none";
+
+    }
+
+});
+
+if (scrollTopBtn) {
+
+    scrollTopBtn.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+}
+
+/*=========================================
+        COUNTER ANIMATION
+=========================================*/
+
+const counterObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            const counter = entry.target;
+
+            const target = Number(counter.dataset.target);
+
+            let current = 0;
+
+            const speed = target / 80;
+
+            function updateCounter() {
+
+                current += speed;
+
+                if (current < target) {
+
+                    counter.innerText = Math.ceil(current);
+
+                    requestAnimationFrame(updateCounter);
+
+                } else {
+
+                    counter.innerText = target;
+
+                }
+
+            }
+
+            updateCounter();
+
+            counterObserver.unobserve(counter);
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.5
+
+});
+
+document.querySelectorAll(".counter").forEach(counter => {
+
+    counterObserver.observe(counter);
+
+});
+
+/*=========================================
+        CERTIFICATE IMAGE MODAL
+=========================================*/
+
+const certificateModal = document.getElementById("certificateModal");
+const certificateImage = document.getElementById("certificateImage");
+
+document.querySelectorAll(".certificate-card img").forEach(img => {
+
+    img.addEventListener("click", () => {
+
+        if (!certificateModal || !certificateImage) return;
+
+        certificateImage.src = img.src;
+
+        const modal = new bootstrap.Modal(certificateModal);
+
+        modal.show();
+
+    });
+
+});
+
+/*=========================================
+        CARD HOVER EFFECT
+=========================================*/
+
+document.querySelectorAll(
+
+".project-card,.skill-card,.experience-card,.education-card,.certificate-card"
+
+).forEach(card => {
+
+    card.addEventListener("mouseenter", () => {
+
+        card.style.transform = "translateY(-10px)";
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform = "";
+
+    });
+
+});
+
+/*=========================================
+        EMAILJS CONTACT FORM
+=========================================*/
+
+emailjs.init({
+    publicKey: "f-C5HQ7YefRWZ1OjS"
+});
+
+const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
 
-    contactForm.addEventListener(
-        "submit",
+    contactForm.addEventListener("submit", async function (e) {
 
-        function (e) {
+        e.preventDefault();
 
-            e.preventDefault();
+        const submitBtn = contactForm.querySelector("button[type='submit']");
 
-            emailjs.sendForm(
+        const originalText = submitBtn.innerHTML;
 
+        submitBtn.disabled = true;
+
+        submitBtn.innerHTML = `
+            <span class="spinner-border spinner-border-sm me-2"></span>
+            Sending...
+        `;
+
+        try {
+
+            const response = await emailjs.sendForm(
                 "service_ob9bwlm",
-
                 "template_xjq08zy",
-
-                this
-
-            )
-
-            .then(() => {
-
-                alert(
-                    "Message sent successfully!"
-                );
-
-                contactForm.reset();
-
-            })
-
-            .catch((error) => {
-
-                console.error(
-                    "EmailJS Error:",
-                    error
-                );
-
-                alert(
-                    "Failed to send message!"
-                );
-
-            });
-
-        }
-
-    );
-
-}
-
-/* ==========================
-   MOBILE MENU
-========================== */
-
-const menuBtn =
-
-    document.querySelector(
-        ".menu-btn"
-    );
-
-const navLinks =
-
-    document.querySelector(
-        ".nav-links"
-    );
-
-if (menuBtn) {
-
-    menuBtn.addEventListener(
-
-        "click",
-
-        () => {
-
-            navLinks.classList.toggle(
-                "active"
+                contactForm
             );
 
+            console.log(response);
+
+            alert("✅ Message sent successfully!");
+
+            contactForm.reset();
+
         }
 
-    );
+        catch (error) {
+
+            console.error(error);
+
+            alert("❌ Failed to send message.\n\nCheck Console (F12).");
+
+        }
+
+        finally {
+
+            submitBtn.disabled = false;
+
+            submitBtn.innerHTML = originalText;
+
+        }
+
+    });
 
 }
-
-
-/* ==========================
-   ACTIVE NAV LINK
-========================== */
-
-const sections =
-
-    document.querySelectorAll(
-        "section"
-    );
-
-const navItems =
-
-    document.querySelectorAll(
-        ".nav-links a"
-    );
-
-window.addEventListener(
-
-    "scroll",
-
-    () => {
-
-        let current = "";
-
-        sections.forEach(section => {
-
-            const sectionTop =
-                section.offsetTop - 150;
-
-            if (
-                pageYOffset >=
-                sectionTop
-            ) {
-
-                current =
-                    section.getAttribute(
-                        "id"
-                    );
-
-            }
-
-        });
-
-        navItems.forEach(link => {
-
-            link.classList.remove(
-                "active"
-            );
-
-            if (
-                link.getAttribute("href")
-                === "#" + current
-            ) {
-
-                link.classList.add(
-                    "active"
-                );
-
-            }
-
-        });
-
-    }
-
-);
-
-
-/* ==========================
-   SMOOTH SCROLL
-========================== */
-
-document.querySelectorAll(
-    'a[href^="#"]'
-).forEach(anchor => {
-
-    anchor.addEventListener(
-
-        "click",
-
-        function (e) {
-
-            e.preventDefault();
-
-            document.querySelector(
-
-                this.getAttribute(
-                    "href"
-                )
-
-            ).scrollIntoView({
-
-                behavior: "smooth"
-
-            });
-
-        }
-
-    );
-
-});

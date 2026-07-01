@@ -3,27 +3,47 @@
 
 <head>
 
+    <!-- Meta -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <title>Sayed Hammaad Imtiyaz | Portfolio</title>
 
-    <title>
-        Hammaad Imtiyaz Sayed | Portfolio
-    </title>
+    <meta name="description"
+        content="Computer Engineering Student | Cybersecurity Enthusiast | Full Stack Developer">
 
-    <link rel="stylesheet"
-        href="style.css">
+    <meta name="keywords"
+        content="Portfolio, Cybersecurity, Bootstrap, HTML, CSS, JavaScript">
+
+    <meta name="author"
+        content="Sayed Hammaad Imtiyaz">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
-
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- AOS Animation -->
-
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css"
         rel="stylesheet">
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet"
+        href="style.css">
 
 </head>
 
@@ -33,1002 +53,2066 @@
 
     <div id="loader">
 
-        <div class="loader-text">
+        <div class="text-center">
 
-            HAMMAAD IMTIYAZ SAYED
+            <div class="spinner-border text-primary"
+                style="width:70px;height:70px;"
+                role="status">
+            </div>
+
+            <h2 class="mt-4">
+                SAYED HAMMAAD IMTIYAZ
+            </h2>
+
+            <p>
+                Loading Portfolio...
+            </p>
 
         </div>
 
     </div>
 
-    <!-- Navbar -->
+    <!-- Scroll Progress -->
 
-    <header>
+    <div id="progressBar"></div>
 
-        <nav class="navbar">
+    <!-- ================= NAVBAR ================= -->
 
-            <div class="logo-container">
+    <nav class="navbar navbar-expand-lg fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center"
+                href="#home">
 
                 <img src="images/profile.jpg.png"
-                    alt="Profile"
-                    class="logo-img">
+                    class="logo-img"
+                    alt="Logo">
 
-                <span class="logo">
+                <div class="ms-3">
 
-                    Hammaad
+                    <h5 class="mb-0">
 
-                </span>
+                        Hammaad
 
-            </div>
+                    </h5>
 
-            <ul class="nav-links">
+                    <small>
 
-                <li>
-                    <a href="#home">
-                        Home
-                    </a>
-                </li>
+                        Portfolio
 
-                <li>
-                    <a href="#about">
-                        About
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#education">
-                        Education
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#skills">
-                        Skills
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#achievements">
-                        Achievements
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#certificates">
-                        Certificates
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#projects">
-                        Projects
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#contact">
-                        Contact
-                    </a>
-                </li>
-
-            </ul>
-
-            <div class="menu-btn">
-
-                <i class="fas fa-bars"></i>
-
-            </div>
-
-        </nav>
-
-    </header>
-
-    <!-- Hero Section -->
-
-    <section id="home"
-        class="hero">
-
-        <div class="hero-content">
-
-            <h3>
-
-                Hello, I'm
-
-            </h3>
-
-            <h1>
-
-                Hammaad Imtiyaz Sayed
-
-            </h1>
-
-            <h2>
-
-                <span class="typing"></span>
-
-            </h2>
-
-            <p>
-
-                Computer Engineering Student |
-                Cybersecurity Enthusiast | 
-                Full Stack Developer | 
-                Open Source Learner | 
-                Passionate About Technology & Innovation
-
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#projects"
-                    class="btn">
-
-                    View Projects
-
-                </a>
-
-                <a href="resume.pdf.pdf"
-                    class="btn btn-outline"
-                    download>
-
-                    Download Resume
-
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- AI Assistant -->
-
-        <div class="robot-container">
-
-            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png"
-                alt="Robot"
-                class="robot">
-
-            <div class="robot-speech">
-
-                <p id="robot-text">
-
-                    Hello! Welcome to my Portfolio.
-
-                </p>
-
-            </div>
-
-            <button
-                class="btn"
-                onclick="speakIntro()">
-
-                🔊 About Me
-
-            </button>
-
-        </div>
-
-    </section>
-
-    <!-- About Section -->
-
-    <section id="about"
-        class="section">
-
-        <h2 class="section-title">
-
-            About Me
-
-        </h2>
-
-        <div class="about-wrapper">
-
-            <div class="about-image">
-
-                <img src="images/profile.jpg.png"
-                    alt="Profile">
-
-            </div>
-
-            <div class="about-content">
-
-                <p>
-
-                    Hi, I'm Hammaad Sayed, a Computer Engineering student passionate about Cybersecurity, 
-                    Full Stack Development,and emerging technologies. I enjoy building innovative solutions, 
-                    learning new skills, and solving real-world problems through technology.
-                        <br></br>
-                    I am a Marketing Team Member at GDGC (Google Developer Groups on Campus) 
-                    and a Co-Organizer of Byte Battle, where I contribute to organizing and promoting technical events 
-                    and fostering student engagement in the tech community.
-                        <br> </br>
-                    Driven by curiosity and continuous learning, I aspire to build secure, scalable, 
-                    and impactful digital solutions while growing as a technology professional. 🚀
-
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-        <!-- Education Section -->
-
-    <section id="education"
-        class="section">
-
-        <h2 class="section-title">
-
-            Education
-
-        </h2>
-
-        <div class="education-container">
-
-            <!-- B.Tech -->
-
-            <div class="education-card">
-
-                <div class="education-icon">
-
-                    <i class="fas fa-graduation-cap"></i>
+                    </small>
 
                 </div>
-
-                <h3>
-
-                    B.Tech Computer Engineering
-
-                </h3>
-
-                <p class="edu-college">
-
-                    Anjuman-I-Islam's Kalsekar Technical Campus,
-                    New Panvel
-
-                </p>
-
-                <div class="cgpa-list">
-
-                    <p>
-                        Semester 1 :  CGPA
-                    </p>
-
-                    <p>
-                        Semester 2 :  CGPA
-                    </p>
-
-                    <p>
-                        Semester 3 :  CGPA
-                    </p>
-
-                    <p>
-                        Semester 4 :  CGPA
-                    </p>
-
-                </div>
-
-                <p class="overall-cgpa">
-
-                    Overall CGPA : 
-
-                </p>
-
-                <span class="edu-year">
-
-                    2024 - 2028
-
-                </span>
-
-            </div>
-
-            <!-- HSC -->
-
-            <div class="education-card">
-
-                <div class="education-icon">
-
-                    <i class="fas fa-school"></i>
-
-                </div>
-
-                <h3>
-
-                    Higher Secondary (12th)
-
-                </h3>
-
-                <p class="edu-college">
-
-                    Shoeb Junior College of
-                    Arts, Science & Commerce
-
-                </p>
-
-                <p>
-
-                    Maharashtra State Board
-
-                </p>
-
-                <p>
-
-                    Percentage : 66.40%
-
-                </p>
-
-                <span class="edu-year">
-
-                    2023 - 2024
-
-                </span>
-
-            </div>
-
-            <!-- SSC -->
-
-            <div class="education-card">
-
-                <div class="education-icon">
-
-                    <i class="fas fa-book"></i>
-
-                </div>
-
-                <h3>
-
-                    Secondary School (10th)
-
-                </h3>
-
-                <p class="edu-college">
-
-                    St. John The Baptist High School
-                    & Jr. College, Thane
-
-                </p>
-
-                <p>
-
-                    Maharashtra State Board
-
-                </p>
-
-                <p>
-
-                    Percentage : 70.56%
-
-                </p>
-
-                <span class="edu-year">
-
-                    2022
-
-                </span>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Skills Section -->
-
-    <section id="skills"
-        class="section">
-
-        <h2 class="section-title">
-
-            Skills
-
-        </h2>
-
-        <div class="skills-container">
-
-            <div class="skill-card">
-
-                <i class="fab fa-html5"></i>
-
-                <h3>HTML</h3>
-
-            </div>
-
-            <div class="skill-card">
-
-                <i class="fab fa-css3-alt"></i>
-
-                <h3>CSS</h3>
-
-            </div>
-
-            <div class="skill-card">
-
-                <i class="fab fa-js"></i>
-
-                <h3>JavaScript</h3>
-
-            </div>
-
-            <div class="skill-card">
-
-                <i class="fab fa-bootstrap"></i>
-
-                <h3>Bootstrap</h3>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Achievements Section -->
-
-    <section id="achievements"
-        class="section">
-
-        <h2 class="section-title">
-
-            Achievements
-
-        </h2>
-
-        <div class="timeline">
-
-            <div class="timeline-item">
-
-                <h3>
-
-                    🏆 Byte Battle 2026
-
-                </h3>
-
-                <p>
-
-                    Co-Organizer
-
-                </p>
-
-            </div>
-
-            <div class="timeline-item">
-
-                <h3>
-
-                    📢 GDGC
-
-                </h3>
-
-                <p>
-
-                    Marketing Team Member
-
-                </p>
-
-            </div>
-
-            <div class="timeline-item">
-
-                <h3>
-
-                    🎯 Technical Events
-
-                </h3>
-
-                <p>
-
-                    Active Participation &
-                    Event Management
-
-                </p>
-
-            </div>
-
-            <div class="timeline-item">
-
-                <h3>
-
-                    💻 Web Development
-
-                </h3>
-
-                <p>
-
-                    Built Multiple Responsive
-                    Web Applications & Projects
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-        <!-- Certificates Section -->
-
-    <section id="certificates"
-        class="section">
-
-        <h2 class="section-title">
-
-            Certificates
-
-        </h2>
-
-        <div class="certificate-grid">
-
-            <div class="certificate-card">
-
-                <img src="certificate/c1.jpg.jpg"
-                    alt="Certificate"
-                    onclick="openCertificate(this.src)">
-
-                <h3>
-
-                    Data Analytics
-
-                </h3>
-
-                <button
-                    onclick="openCertificate('certificate/c1.jpg.jpg')"
-                    class="btn">
-
-                    View Certificate
-
-                </button>
-
-            </div>
-
-            <div class="certificate-card">
-
-                <img src="certificate/c2.jpg.jpg"
-                    alt="Certificate"
-                    onclick="openCertificate(this.src)">
-
-                <h3>
-
-                    World Book & Copyright Day
-
-                </h3>
-
-                <button
-                    onclick="openCertificate('certificate/c2.jpg.jpg')"
-                    class="btn">
-
-                    View Certificate
-
-                </button>
-
-            </div>
-
-            <div class="certificate-card">
-
-                <img src="certificate/c3.jpg.png"
-                    alt="Certificate"
-                    onclick="openCertificate(this.src)">
-
-                <h3>
-
-                    Pitch Night Edition
-
-                </h3>
-
-                <button
-                    onclick="openCertificate('certificate/c3.jpg.png')"
-                    class="btn">
-
-                    View Certificate
-
-                </button>
-
-            </div>
-
-            <div class="certificate-card">
-
-                <img src="certificate/c4.jpg.jpg"
-                    alt="Certificate"
-                    onclick="openCertificate(this.src)">
-
-                <h3>
-
-                    International Day Against Drug Abuse
-
-                </h3>
-
-                <button
-                    onclick="openCertificate('certificate/c4.jpg.jpg')"
-                    class="btn">
-
-                    View Certificate
-
-                </button>
-
-            </div>
-
-
-            <div class="certificate-card">
-
-                <img src="certificate/c5.jpg.jpeg"
-                    alt="Certificate"
-                    onclick="openCertificate(this.src)">
-
-                <h3>
-
-                    Music Night Edition
-                </h3>
-
-                <button
-                    onclick="openCertificate('certificate/c5.jpg.jpeg')"
-                    class="btn">
-
-                    View Certificate
-
-                </button>
-
-            </div>
-
-            <div class="certificate-card">
-
-                <img src="certificate/c6.jpg.jpeg"
-                    alt="Certificate"
-                    onclick="openCertificate(this.src)">
-
-                <h3>
-
-                    PowerBi Certificate
-
-                </h3>
-
-                <button
-                    onclick="openCertificate('certificate/c6.jpg.jpeg')"
-                    class="btn">
-
-                    View Certificate
-
-                </button>
-
-            </div>
-
-            <div class="certificate-card">
-
-                <img src="certificate/c7.jpg.jpeg"
-                    alt="Certificate"
-                    onclick="openCertificate(this.src)">
-
-                <h3>
-
-                    Alogrithm X 2026
-
-                </h3>
-
-                <button
-                    onclick="openCertificate('certificate/c7.jpg.jpeg')"
-                    class="btn">
-
-                    View Certificate
-
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Projects Section -->
-
-    <section id="projects"
-        class="section">
-
-        <h2 class="section-title">
-
-            Projects
-
-        </h2>
-
-        <div class="projects-container">
-
-            <!-- Project 1 -->
-
-            <div class="project-card">
-
-                <h3>
-
-                    CalmClass
-
-                </h3>
-
-                <p>
-
-                    CalmClass is a modern wellness platform
-                    designed to support teachers' mental
-                    health and well-being through mindfulness,
-                    stress-relief resources and self-care tools.
-
-                </p>
-
-                <div class="project-buttons">
-
-                    <a href="https://calmclass.vercel.app"
-                        target="_blank"
-                        class="btn">
-
-                        View Project
-
-                    </a>
-
-                    <a href="https://github.com/hammaadsayed/calmclass"
-                        target="_blank"
-                        class="btn btn-outline">
-
-                        Source Code
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Project 2 -->
-
-            <div class="project-card">
-
-                <h3>
-
-                    SmartDL 
-
-                </h3>
-
-                <p>
-
-                    SmartDL is an AI-powered digital driving license system that allows users to apply online, upload documents, book a nearby RTO booth and driving test, and receive real-time application updates. 
-                    Once approved, users can verify their identity using a unique ID or QR code at any SmartDL kiosk and print their driving license within minutes, making the process faster, paperless, and more convenient.
-
-                </p>
-
-                <div class="project-buttons">
-
-                    <a href="https://smart-dl.lovable.app"
-                        class="btn">
-
-                        View Project
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Project 3 -->
-
-            <div class="project-card">
-
-                <h3>
-
-                    CPU Scheduling Solver
-
-                </h3>
-
-                <p>
-
-                    A CPU Scheduling Solver is a tool or algorithm that determines the order in which processes are executed by the CPU. 
-                    It applies scheduling algorithms such as FCFS, SJF, Priority, Round Robin, and SRTF to optimize CPU utilization, reduce waiting and turnaround time, and improve overall system performance. 
-                    It helps visualize and compare the efficiency of different scheduling techniques.
-
-                </p>
-
-                <div class="project-buttons">
-
-                    <a href="https://cpu-scheduler-algorithm-five.vercel.app/"
-                        class="btn">
-
-                        View Project
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- Project 4 -->
-
-            <div class="project-card">
-
-                <h3>
-
-                    Civic Connect
-
-                </h3>
-
-                <p>
-
-                    Civic Connect is a smart civic issue reporting platform that enables citizens to report public problems such as potholes, garbage, water leaks, and streetlight failures. 
-                    It allows users to upload complaints with photos and location details, helping authorities respond more efficiently while improving transparency and communication between citizens and local government.
-                </p>
-
-                <div class="project-buttons">
-
-                    <a href="https://officalcivicconnect.lovable.app"
-                        class="btn">
-
-                        View Project
-
-                    </a>
-
-                </div>
-
-            </div>
-            
-
-            <!-- Project 5 -->
-
-            <div class="project-card">
-
-                <h3>
-
-                    Disaster Preparedness
-
-                </h3>
-
-                <p>
-
-                    Disaster Preparedness is a platform designed to help people stay safe before, during, and after emergencies. 
-                    It provides real-time alerts, safety guidelines, emergency contacts, and disaster preparedness resources, enabling users to respond quickly and reduce the impact of natural or man-made disasters.
-                </p>
-
-                <div class="project-buttons">
-
-                    <a href="https://offical-disaster-preparedness.lovable.app"
-                        class="btn">
-
-                        View Project
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Contact Section -->
-
-    <section id="contact"
-        class="section">
-
-        <h2 class="section-title">
-
-            Contact Me
-
-        </h2>
-
-        <form id="contact-form"
-            class="contact-form">
-
-            <input type="text"
-                name="name"
-                placeholder="Your Name"
-                required>
-
-            <input type="email"
-                name="email"
-                placeholder="Your Email"
-                required>
-
-             <input
-    type="tel"
-    name="phone"
-    placeholder="Your Contact Number"
-    required>
-
-            <textarea
-                name="message"
-                rows="6"
-                placeholder="Your Message"
-                required></textarea>
-
-            <button type="submit"
-                class="btn">
-
-                Send Message
-
-            </button>
-
-        </form>
-
-    </section>
-
-    <!-- Footer -->
-
-    <footer>
-
-        <h3>
-
-            Hammaad Imtiyaz Sayed
-
-        </h3>
-
-        <p>
-
-            Computer Engineering Student |
-            Aspiring Cybersecurity Enthusiast
-
-        </p>
-
-        <div class="social-links">
-
-            <a href="https://instagram.com/hammaad_sayed"
-                target="_blank">
-
-                <i class="fab fa-instagram"></i>
 
             </a>
 
-            <a href="https://linkedin.com/in/hammaad-sayed-722b92284"
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <i class="fas fa-bars text-white"></i>
+
+            </button>
+
+            <div class="collapse navbar-collapse"
+                id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                            href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="#education">Education</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="#skills">Skills</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="#experience">Experience</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="#projects">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="#certificates">Certificates</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+                <a href="resume.pdf.pdf"
+                    download
+                    class="btn btn-primary ms-lg-4">
+
+                    <i class="fas fa-download"></i>
+
+                    Resume
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO STARTS BELOW -->
+
+    <!-- =========================================
+                HERO SECTION
+========================================= -->
+
+<section id="home" class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center gy-5">
+
+            <!-- Left -->
+
+            <div class="col-lg-6 order-2 order-lg-1">
+
+                <h5 class="text-primary fw-bold mb-3"
+                    data-aos="fade-right">
+
+                    👋 Hello, I'm
+
+                </h5>
+
+                <h1 class="display-3 fw-bold"
+                    data-aos="fade-right"
+                    data-aos-delay="100">
+
+                    Sayed Hammaad Imtiyaz
+
+                </h1>
+
+                <h2 class="mt-3"
+                    data-aos="fade-right"
+                    data-aos-delay="200">
+
+                    <span id="typing"></span>
+
+                </h2>
+
+                <p class="lead mt-4"
+                    data-aos="fade-right"
+                    data-aos-delay="300">
+
+                    Passionate Computer Engineering student specializing in
+                    <strong>Cybersecurity</strong>,
+                    <strong>Full Stack Development</strong>
+                    and modern web technologies.
+                    I enjoy building scalable applications,
+                    solving real-world problems,
+                    and continuously learning emerging technologies.
+
+                </p>
+
+                <!-- Buttons -->
+
+                <div class="d-flex flex-wrap gap-3 mt-4"
+                    data-aos="fade-up"
+                    data-aos-delay="400">
+
+                    <a href="#projects"
+                        class="btn btn-primary btn-lg">
+
+                        <i class="fas fa-code"></i>
+
+                        View Projects
+
+                    </a>
+
+                    <a href="#contact"
+                        class="btn btn-outline-light btn-lg">
+
+                        <i class="fas fa-paper-plane"></i>
+
+                        Contact Me
+
+                    </a>
+
+                </div>
+
+                <!-- Social Icons -->
+
+                <div class="social-icons mt-5"
+                    data-aos="fade-up"
+                    data-aos-delay="500">
+
+                    <a href="https://github.com/hammaadsayed"
+                        target="_blank">
+
+                        <i class="fab fa-github"></i>
+
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/sayed-hammaad-imtiyaz-722b92284"
+                        target="_blank">
+
+                        <i class="fab fa-linkedin"></i>
+
+                    </a>
+
+                    <a href="https://instagram.com/"
+                        target="_blank">
+
+                        <i class="fab fa-instagram"></i>
+
+                    </a>
+
+                    <a href="mailto:YOUR_EMAIL@gmail.com">
+
+                        <i class="fas fa-envelope"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Right -->
+
+            <div class="col-lg-6 text-center order-1 order-lg-2">
+
+                <div class="hero-image"
+                    data-aos="zoom-in">
+
+                    <img src="images/profile.jpg.png"
+                        alt="Profile Image"
+                        class="img-fluid">
+
+                </div>
+
+                <!-- Quick Info -->
+
+                <div class="hero-card mt-4"
+                    data-aos="fade-up"
+                    data-aos-delay="300">
+
+                    <div class="row text-center">
+
+                        <div class="col-4">
+
+                            <h3>
+
+                                10+
+
+                            </h3>
+
+                            <small>
+
+                                Projects
+
+                            </small>
+
+                        </div>
+
+                        <div class="col-4">
+
+                            <h3>
+
+                                15+
+
+                            </h3>
+
+                            <small>
+
+                                Certificates
+
+                            </small>
+
+                        </div>
+
+                        <div class="col-4">
+
+                            <h3>
+
+                                3+
+
+                            </h3>
+
+                            <small>
+
+                                Experience
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+                ABOUT SECTION
+                STARTS BELOW
+========================================= -->
+
+<!-- =========================================
+                ABOUT SECTION
+========================================= -->
+
+<section id="about" class="py-5">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+
+        <div class="text-center mb-5" data-aos="fade-up">
+
+            <h5 class="text-primary fw-bold">
+
+                ABOUT ME
+
+            </h5>
+
+            <h2 class="display-5 fw-bold">
+
+                Know More About Me
+
+            </h2>
+
+            <p class="text-secondary">
+
+                Passionate about building secure, scalable and modern digital solutions.
+
+            </p>
+
+        </div>
+
+        <div class="row align-items-center gy-5">
+
+            <!-- Profile Image -->
+
+            <div class="col-lg-5 text-center"
+                data-aos="fade-right">
+
+                <img src="images/profile.jpg.png"
+                    alt="Profile"
+                    class="about-img img-fluid">
+
+            </div>
+
+            <!-- About Content -->
+
+            <div class="col-lg-7"
+                data-aos="fade-left">
+
+                <h2 class="fw-bold mb-4">
+
+                    Hammaad Imtiyaz Sayed
+
+                </h2>
+
+                <p class="lead">
+
+                    I'm a Computer Engineering student passionate about
+                    Cybersecurity, Full Stack Development,
+                    Artificial Intelligence and Open Source.
+
+                </p>
+
+                <p>
+
+                    I enjoy solving real-world problems through technology,
+                    building responsive web applications, participating in
+                    hackathons, organizing technical events, and continuously
+                    improving my development skills.
+
+                </p>
+
+                <!-- Personal Information -->
+
+                <div class="row g-3 mt-4">
+
+                    <div class="col-md-6">
+
+                        <div class="info-box">
+
+                            <h6>
+
+                                <i class="fas fa-user text-primary"></i>
+
+                                Name
+
+                            </h6>
+
+                            <p>
+
+                                Hammaad Imtiyaz Sayed
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="info-box">
+
+                            <h6>
+
+                                <i class="fas fa-envelope text-primary"></i>
+
+                                Email
+
+                            </h6>
+
+                            <p>
+
+                                sayedhammaad58@gmail.com
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="info-box">
+
+                            <h6>
+
+                                <i class="fas fa-phone text-primary"></i>
+
+                                Phone
+
+                            </h6>
+
+                            <p>
+
+                                +91 9892615005  
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="info-box">
+
+                            <h6>
+
+                                <i class="fas fa-location-dot text-primary"></i>
+
+                                Location
+
+                            </h6>
+
+                            <p>
+
+                                Thane, Maharashtra, India
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+
+                <div class="mt-4 d-flex flex-wrap gap-3">
+
+                    <a href="resume.pdf.pdf"
+                        download
+                        class="btn btn-primary">
+
+                        <i class="fas fa-download"></i>
+
+                        Download Resume
+
+                    </a>
+
+                    <a href="#contact"
+                        class="btn btn-outline-light">
+
+                        <i class="fas fa-paper-plane"></i>
+
+                        Hire Me
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Counter Cards -->
+
+        <div class="row mt-5 g-4">
+
+            <div class="col-md-3 col-6">
+
+                <div class="counter-box">
+
+                    <h2>
+
+                        10
+
+                    </h2>
+
+                    <p>
+
+                        Projects
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 col-6">
+
+                <div class="counter-box">
+
+                    <h2>
+
+                        15
+
+                    </h2>
+
+                    <p>
+
+                        Certificates
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 col-6">
+
+                <div class="counter-box">
+
+                    <h2>
+
+                        3
+
+                    </h2>
+
+                    <p>
+
+                        Leadership Roles
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 col-6">
+
+                <div class="counter-box">
+
+                    <h2>
+
+                        100
+
+                    </h2>
+
+                    <p>
+
+                        Learning Hours
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+            EDUCATION SECTION
+            STARTS BELOW
+========================================= -->
+
+<!-- =========================================
+                EDUCATION SECTION
+========================================= -->
+
+<section id="education" class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5" data-aos="fade-up">
+
+            <h5 class="text-primary fw-bold">
+
+                EDUCATION
+
+            </h5>
+
+            <h2 class="display-5 fw-bold">
+
+                My Education
+
+            </h2>
+
+            <p class="text-secondary">
+
+                My academic journey and continuous learning path.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- B.Tech -->
+
+<div class="col-lg-6">
+
+    <div class="card education-card h-100 shadow">
+
+        <div class="card-body">
+
+            <div class="text-center">
+
+                <i class="fas fa-graduation-cap education-icon"></i>
+
+                <h4 class="mt-3">
+
+                    B.Tech Computer Engineering
+
+                </h4>
+
+                <h6 class="text-primary">
+
+                    Anjuman-I-Islam's Kalsekar Technical Campus
+
+                </h6>
+
+                <span class="badge bg-primary mb-3">
+
+                    Pursuing (2024 – 2028)
+
+                </span>
+
+            </div>
+
+            <p class="text-center">
+
+                Currently pursuing Bachelor of Technology in
+                Computer Engineering with a strong interest in
+                Cybersecurity and Full Stack Development.
+
+            </p>
+
+            <hr>
+
+            <h6 class="fw-bold mb-3">
+
+                Semester Performance
+
+            </h6>
+
+            <div class="row">
+
+                <div class="col-6">
+
+                    <p><strong>Semester I</strong></p>
+
+                </div>
+
+                <div class="col-6 text-end">
+
+                    <span class="badge bg-success">
+
+                        X.XX CGPA
+
+                    </span>
+
+                </div>
+
+                <div class="col-6">
+
+                    <p><strong>Semester II</strong></p>
+
+                </div>
+
+                <div class="col-6 text-end">
+
+                    <span class="badge bg-success">
+
+                        X.XX CGPA
+
+                    </span>
+
+                </div>
+
+                <div class="col-6">
+
+                    <p><strong>Semester III</strong></p>
+
+                </div>
+
+                <div class="col-6 text-end">
+
+                    <span class="badge bg-success">
+
+                        X.XX CGPA
+
+                    </span>
+
+                </div>
+
+                <div class="col-6">
+
+                    <p><strong>Semester IV</strong></p>
+
+                </div>
+
+                <div class="col-6 text-end">
+
+                    <span class="badge bg-success">
+
+                        X.XX CGPA
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="d-flex justify-content-between">
+
+                <strong>
+
+                    Overall CGPA
+
+                </strong>
+
+                <span class="badge bg-primary">
+
+                    X.XX
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+            <!-- HSC -->
+
+<div class="col-lg-3">
+
+    <div class="card education-card h-100 shadow">
+
+        <div class="card-body text-center">
+
+            <i class="fas fa-school education-icon"></i>
+
+            <h4 class="mt-3">
+
+                HSC
+
+            </h4>
+
+            <h6 class="text-success">
+
+                Shoeb Junior College
+
+            </h6>
+
+            <p>
+
+                Maharashtra State Board
+
+            </p>
+
+            <div class="mt-4">
+
+                <h3 class="text-primary">
+
+                    66.40%
+
+                </h3>
+
+                <small>
+
+                    Overall Percentage
+
+                </small>
+
+            </div>
+
+            <span class="badge bg-success mt-3">
+
+                Completed (2024)
+
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+                     <!-- SSC -->
+
+<div class="col-lg-3">
+
+    <div class="card education-card h-100 shadow">
+
+        <div class="card-body text-center">
+
+            <i class="fas fa-book-open education-icon"></i>
+
+            <h4 class="mt-3">
+
+                SSC
+
+            </h4>
+
+            <h6 class="text-success">
+
+                St.John The Baptist High School
+
+            </h6>
+
+            <p>
+
+                Maharashtra State Board
+
+            </p>
+
+            <div class="mt-4">
+
+                <h3 class="text-primary">
+
+                    70.40%
+
+                </h3>
+
+                <small>
+
+                    Overall Percentage
+
+                </small>
+
+            </div>
+
+            <span class="badge bg-success mt-3">
+
+                Completed (2022)
+
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+                SKILLS SECTION
+========================================= -->
+
+<section id="skills" class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5" data-aos="fade-up">
+
+            <h5 class="text-primary fw-bold">
+
+                MY SKILLS
+
+            </h5>
+
+            <h2 class="display-5 fw-bold">
+
+                Technical Skills
+
+            </h2>
+
+            <p class="text-secondary">
+
+                Technologies and tools I use for building projects.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- HTML -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="skill-card">
+
+                    <i class="fab fa-html5 text-danger"></i>
+
+                    <h4>HTML</h4>
+
+                    <div class="progress">
+
+                        <div class="progress-bar bg-danger"
+                            style="width:95%">
+
+                            95%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CSS -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="skill-card">
+
+                    <i class="fab fa-css3-alt text-primary"></i>
+
+                    <h4>CSS</h4>
+
+                    <div class="progress">
+
+                        <div class="progress-bar bg-primary"
+                            style="width:90%">
+
+                            90%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- JavaScript -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="skill-card">
+
+                    <i class="fab fa-js text-warning"></i>
+
+                    <h4>JavaScript</h4>
+
+                    <div class="progress">
+
+                        <div class="progress-bar bg-warning text-dark"
+                            style="width:85%">
+
+                            10%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bootstrap -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="skill-card">
+
+                    <i class="fab fa-bootstrap text-info"></i>
+
+                    <h4>Bootstrap</h4>
+
+                    <div class="progress">
+
+                        <div class="progress-bar bg-info"
+                            style="width:90%">
+
+                            90%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Python -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="skill-card">
+
+                    <i class="fab fa-python text-success"></i>
+
+                    <h4>Python</h4>
+
+                    <div class="progress">
+
+                        <div class="progress-bar bg-success"
+                            style="width:80%">
+
+                            80%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Java -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="skill-card">
+
+                    <i class="fab fa-java text-secondary"></i>
+
+                    <h4>Java</h4>
+
+                    <div class="progress">
+
+                        <div class="progress-bar bg-secondary"
+                            style="width:75%">
+
+                            75%
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Additional Skills -->
+
+        <div class="text-center mt-5">
+
+            <span class="badge bg-primary m-2 p-3">Cybersecurity</span>
+
+            <span class="badge bg-warning text-dark m-2 p-3">Git & GitHub</span>
+
+            <span class="badge bg-danger m-2 p-3">MySQL</span>
+
+            <span class="badge bg-info text-dark m-2 p-3">VS Code</span>
+
+            <span class="badge bg-dark m-2 p-3">Linux</span>
+
+            <span class="badge bg-secondary m-2 p-3">Problem Solving</span>
+
+            <span class="badge bg-primary m-2 p-3">Data Structures</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+        EXPERIENCE SECTION STARTS BELOW
+========================================= -->
+
+<!-- =========================================
+                EXPERIENCE SECTION
+========================================= -->
+
+<section id="experience" class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5" data-aos="fade-up">
+
+            <h5 class="text-primary fw-bold">
+
+                EXPERIENCE
+
+            </h5>
+
+            <h2 class="display-5 fw-bold">
+
+                Leadership & Experience
+
+            </h2>
+
+            <p class="text-secondary">
+
+                My journey through technical communities, leadership roles,
+                hackathons, and professional development.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- GDG -->
+
+            <div class="col-lg-6">
+
+                <div class="experience-card h-100">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-primary mb-3">
+
+                            Google Developer Groups
+
+                        </span>
+
+                        <h4>
+
+                            GDG On Campus – Marketing Team
+
+                        </h4>
+
+                        <h6 class="text-primary">
+
+                            AIKTC
+
+                        </h6>
+
+                        <p>
+
+                            Worked as a Marketing Team Member by promoting
+                            technical events, workshops and Google developer
+                            initiatives while helping students engage with
+                            technology communities.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Byte Battle -->
+
+            <div class="col-lg-6">
+
+                <div class="experience-card h-100">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-success mb-3">
+
+                            Event Management
+
+                        </span>
+
+                        <h4>
+
+                            BYTE BATTLE 2026
+
+                        </h4>
+
+                        <h6 class="text-success">
+
+                            Co-Organizer
+
+                        </h6>
+
+                        <p>
+
+                            Managed registrations, marketing, coordination,
+                            judging process and event execution for the
+                            college hackathon with participants from
+                            multiple engineering colleges.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Microsoft -->
+
+            <div class="col-lg-6">
+
+                <div class="experience-card h-100">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-info text-dark mb-3">
+
+                            Microsoft Learn
+
+                        </span>
+
+                        <h4>
+
+                            Microsoft Learn Student
+
+                        </h4>
+
+                        <h6 class="text-info">
+
+                            Microsoft
+
+                        </h6>
+
+                        <p>
+
+                            Successfully completed Microsoft Learn modules,
+                            hands-on labs and certifications while improving
+                            practical cloud and security skills.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+                ACHIEVEMENTS
+========================================= -->
+
+<section id="achievements" class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h5 class="text-primary fw-bold">
+
+                ACHIEVEMENTS
+
+            </h5>
+
+            <h2 class="display-5 fw-bold">
+
+                Milestones
+
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-3 col-6">
+
+                <div class="counter-card text-center">
+
+                    <i class="fas fa-laptop-code fa-3x text-primary"></i>
+
+                    <h2>
+
+                        10+
+
+                    </h2>
+
+                    <p>
+
+                        Projects
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 col-6">
+
+                <div class="counter-card text-center">
+
+                    <i class="fas fa-award fa-3x text-warning"></i>
+
+                    <h2>
+
+                        15+
+
+                    </h2>
+
+                    <p>
+
+                        Certificates
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 col-6">
+
+                <div class="counter-card text-center">
+
+                    <i class="fas fa-users fa-3x text-success"></i>
+
+                    <h2>
+
+                        4+
+
+                    </h2>
+
+                    <p>
+
+                        Leadership Roles
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 col-6">
+
+                <div class="counter-card text-center">
+
+                    <i class="fas fa-code fa-3x text-danger"></i>
+
+                    <h2>
+
+                        100+
+
+                    </h2>
+
+                    <p>
+
+                        Coding Hours
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+        PROJECTS SECTION STARTS BELOW
+========================================= -->
+
+<!-- =========================================
+                PROJECTS SECTION
+========================================= -->
+
+<section id="projects" class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5" data-aos="fade-up">
+
+            <h5 class="text-primary fw-bold">
+
+                MY PROJECTS
+
+            </h5>
+
+            <h2 class="display-5 fw-bold">
+
+                Featured Projects
+
+            </h2>
+
+            <p class="text-secondary">
+
+                Some of the projects I have developed to solve real-world problems.
+
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- CalmClass -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="project-card h-100">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-primary mb-3">
+
+                            Web Application
+
+                        </span>
+
+                        <h3>
+
+                            CalmClass
+
+                        </h3>
+
+                        <p>
+
+                            Mental wellness platform for teachers providing
+                            stress management, meditation and productivity tools.
+
+                        </p>
+
+                        <div class="mb-3">
+
+                            <span class="badge bg-dark">HTML</span>
+
+                            <span class="badge bg-dark">CSS</span>
+
+                            <span class="badge bg-dark">JavaScript</span>
+
+                        </div>
+
+                        <div class="d-flex gap-2">
+
+                            <a href="#"
+
+                                class="btn btn-primary">
+
+                                Live Demo
+
+                            </a>
+
+                            <a href="https://github.com/hammaadsayed"
+
+                                target="_blank"
+
+                                class="btn btn-outline-primary">
+
+                                GitHub
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- SmartDL -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="project-card h-100">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-success mb-3">
+
+                            AI Project
+
+                        </span>
+
+                        <h3>
+
+                            SmartDL
+
+                        </h3>
+
+                        <p>
+
+                            AI-powered Smart Driving License system with
+                            QR verification, booking system and cloud storage.
+
+                        </p>
+
+                        <div class="mb-3">
+
+                            <span class="badge bg-dark">AI</span>
+
+                            <span class="badge bg-dark">Cloud</span>
+
+                            <span class="badge bg-dark">Bootstrap</span>
+
+                        </div>
+
+                        <a href="#"
+
+                            class="btn btn-success">
+
+                            View Project
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Civic Connect -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="project-card h-100">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-warning text-dark mb-3">
+
+                            Smart City
+
+                        </span>
+
+                        <h3>
+
+                            Civic Connect
+
+                        </h3>
+
+                        <p>
+
+                            Complaint management system allowing citizens
+                            to report civic issues with GPS location.
+
+                        </p>
+
+                        <div class="mb-3">
+
+                            <span class="badge bg-dark">Maps</span>
+
+                            <span class="badge bg-dark">Bootstrap</span>
+
+                            <span class="badge bg-dark">JavaScript</span>
+
+                        </div>
+
+                        <a href="#"
+
+                            class="btn btn-warning">
+
+                            View Project
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Disaster -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="project-card h-100">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-danger mb-3">
+
+                            Emergency
+
+                        </span>
+
+                        <h3>
+
+                            Disaster Preparedness
+
+                        </h3>
+
+                        <p>
+
+                            Disaster awareness platform providing alerts,
+                            emergency contacts and preparedness guides.
+
+                        </p>
+
+                        <div class="mb-3">
+
+                            <span class="badge bg-dark">Bootstrap</span>
+
+                            <span class="badge bg-dark">Responsive</span>
+
+                            <span class="badge bg-dark">Emergency</span>
+
+                        </div>
+
+                        <a href="#"
+
+                            class="btn btn-danger">
+
+                            View Project
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CPU -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="project-card h-100">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-info text-dark mb-3">
+
+                            Operating System
+
+                        </span>
+
+                        <h3>
+
+                            CPU Scheduling Solver
+
+                        </h3>
+
+                        <p>
+
+                            Visual implementation of FCFS, SJF, Priority
+                            and Round Robin scheduling algorithms.
+
+                        </p>
+
+                        <div class="mb-3">
+
+                            <span class="badge bg-dark">HTML</span>
+
+                            <span class="badge bg-dark">CSS</span>
+
+                            <span class="badge bg-dark">JavaScript</span>
+
+                        </div>
+
+                        <a href="#"
+
+                            class="btn btn-info">
+
+                            View Project
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Cybersecurity -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="project-card h-100">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-primary mb-3">
+
+                            Coming Soon
+
+                        </span>
+
+                        <h3>
+
+                            Cybersecurity Projects
+
+                        </h3>
+
+                        <p>
+
+                            Upcoming hands-on projects in ethical hacking,
+                            networking, Linux and penetration testing.
+
+                        </p>
+
+                        <button class="btn btn-outline-primary"
+
+                            disabled>
+
+                            Coming Soon
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+        CERTIFICATES STARTS BELOW
+========================================= -->
+
+<!-- =========================================
+                CERTIFICATES SECTION
+========================================= -->
+
+<section id="certificates" class="py-5 bg-dark">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h5 class="text-primary fw-bold">
+                CERTIFICATES
+            </h5>
+
+            <h2 class="display-5 fw-bold text-white">
+                My Certifications
+            </h2>
+
+            <p class="text-secondary">
+                Certifications earned during my learning journey.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="certificate-card">
+                    <img src="certificate/c1.jpg.jpg" class="img-fluid" alt="Certificate 1">
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="certificate-card">
+                    <img src="certificate/c2.jpg.jpg" class="img-fluid" alt="Certificate 2">
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="certificate-card">
+                    <img src="certificate/c3.jpg.png" class="img-fluid" alt="Certificate 3">
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="certificate-card">
+                    <img src="certificate/c4.jpg.jpg" class="img-fluid" alt="Certificate 4">
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="certificate-card">
+                    <img src="certificate/c5.jpg.jpeg" class="img-fluid" alt="Certificate 5">
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="certificate-card">
+                    <img src="certificate/c6.jpg.jpeg" class="img-fluid" alt="Certificate 6">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+                CONTACT SECTION
+========================================= -->
+
+<section id="contact" class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h5 class="text-primary fw-bold">
+                CONTACT
+            </h5>
+
+            <h2 class="display-5 fw-bold">
+                Get In Touch
+            </h2>
+
+        </div>
+
+        <div class="row g-5">
+
+            <div class="col-lg-5">
+
+                <div class="card h-100 shadow">
+
+                    <div class="card-body p-4">
+
+                        <h3>Contact Information</h3>
+
+                        <p>
+
+                            <i class="fas fa-envelope text-primary me-2"></i>
+
+                            sayedhammaad58@gmail.com
+
+                        </p>
+
+                        <p>
+
+                            <i class="fas fa-phone text-success me-2"></i>
+
+                            +91 9892615005
+
+                        </p>
+
+                        <p>
+
+                            <i class="fas fa-location-dot text-danger me-2"></i>
+
+                            Thane, Maharashtra
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <div class="card shadow">
+
+                    <div class="card-body p-4">
+
+                        <form id="contactForm">
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+
+                                    <input type="text"
+                                        class="form-control"
+                                        name="name"
+                                        placeholder="Full Name"
+                                        required>
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <input type="email"
+                                        class="form-control"
+                                        name="email"
+                                        placeholder="Email"
+                                        required>
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <input type="tel"
+                                        class="form-control"
+                                        name="phone"
+                                        placeholder="Phone Number"
+                                        required>
+
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+
+                                    <input type="text"
+                                        class="form-control"
+                                        name="subject"
+                                        placeholder="Subject"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+                            <div class="mb-3">
+
+                                <textarea
+                                    class="form-control"
+                                    name="message"
+                                    rows="6"
+                                    placeholder="Write your message..."
+                                    required></textarea>
+
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary w-100">
+
+                                <i class="fas fa-paper-plane"></i>
+
+                                Send Message
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+                    FOOTER
+========================================= -->
+
+<footer class="bg-black text-white py-4">
+
+    <div class="container text-center">
+
+        <h4>
+
+            Hammaad Imtiyaz Sayed
+
+        </h4>
+
+        <p>
+
+            Computer Engineering Student | Cybersecurity Enthusiast
+
+        </p>
+
+        <div class="social-icons justify-content-center">
+
+            <a href="https://github.com/hammaadsayed" target="_blank">
+
+                <i class="fab fa-github"></i>
+
+            </a>
+
+            <a href="https://linkedin.com/in/sayed-hammaad-imtiyaz-722b92284"
                 target="_blank">
 
                 <i class="fab fa-linkedin"></i>
 
             </a>
 
-            <a href="https://github.com/hammaadsayed"
-                target="_blank">
+            <a href="mailto:sayedhammaad58@gmail.com">
 
-                <i class="fab fa-github"></i>
+                <i class="fas fa-envelope"></i>
 
             </a>
 
         </div>
 
-        <p>
+        <hr>
 
-            © 2026 All Rights Reserved
+        <p class="mb-0">
+
+            © 2026 Sayed Hammaad Imtiyaz. All Rights Reserved.
 
         </p>
 
-    </footer>
-
-    <!-- Certificate Popup -->
-
-    <div id="certificateModal"
-        class="modal">
-
-        <span class="close"
-            onclick="closeCertificate()">
-
-            &times;
-
-        </span>
-
-        <img id="modalImage">
-
     </div>
 
-    <!-- AOS -->
+</footer>
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<button id="scrollTop" class="btn btn-primary rounded-circle">
 
-    <!-- Typed JS -->
+    <i class="fas fa-arrow-up"></i>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</button>
 
-    <!-- EmailJS -->
+<!-- Bootstrap -->
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
+<!-- AOS -->
 
-        emailjs.init(
-            "f-C5HQ7YefRWZ1OjS"
-        );
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
-    </script>
+<!-- Typed.js -->
 
-    <!-- Main JS -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-    <script src="script.js"></script>
+<!-- GSAP -->
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<!-- EmailJS -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- Custom JS -->
+
+<script src="script.js"></script>
 
 </body>
 
