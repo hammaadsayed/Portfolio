@@ -271,29 +271,55 @@ document.querySelectorAll(".counter").forEach(counter => {
 
 });
 
-/*=========================================
-        CERTIFICATE IMAGE MODAL
-=========================================*/
+//==========================
+// VIEW CERTIFICATE
+//==========================
 
-const certificateModal = document.getElementById("certificateModal");
-const certificateImage = document.getElementById("certificateImage");
+document.querySelectorAll(".view-btn").forEach(button=>{
 
-document.querySelectorAll(".certificate-card img").forEach(img => {
+button.addEventListener("click",function(){
 
-    img.addEventListener("click", () => {
+document.getElementById("certificateImage").src=this.dataset.img;
 
-        if (!certificateModal || !certificateImage) return;
+const modal=new bootstrap.Modal(
 
-        certificateImage.src = img.src;
+document.getElementById("certificateModal")
 
-        const modal = new bootstrap.Modal(certificateModal);
+);
 
-        modal.show();
-
-    });
+modal.show();
 
 });
 
+});
+
+//==========================
+// DESCRIPTION PANEL
+//==========================
+
+document.querySelectorAll(".desc-btn").forEach(button=>{
+
+button.addEventListener("click",function(){
+
+document.getElementById("certificateTitle").innerHTML=this.dataset.title;
+
+document.getElementById("certificateProvider").innerHTML=this.dataset.provider;
+
+document.getElementById("certificateDate").innerHTML=this.dataset.date;
+
+document.getElementById("certificateDescription").innerHTML=this.dataset.description;
+
+const panel=new bootstrap.Offcanvas(
+
+document.getElementById("certificateDetails")
+
+);
+
+panel.show();
+
+});
+
+});
 /*=========================================
         CARD HOVER EFFECT
 =========================================*/

@@ -1226,8 +1226,11 @@
 
                         <h4>
 
-                            GDG On Campus – Marketing Team
+                            GDG On Campus –  Marketing Team
 
+
+
+                            
                         </h4>
 
                         <h6 class="text-primary">
@@ -1814,11 +1817,11 @@
         CERTIFICATES STARTS BELOW
 ========================================= -->
 
-<!-- =========================================
-                CERTIFICATES SECTION
-========================================= -->
+<!-- ===========================
+        CERTIFICATES
+============================ -->
 
-<section id="certificates" class="py-5 bg-dark">
+<section id="certificates" class="py-5">
 
     <div class="container">
 
@@ -1840,40 +1843,163 @@
 
         <div class="row g-4">
 
+            <!-- Certificate 1 -->
             <div class="col-lg-4 col-md-6">
+
                 <div class="certificate-card">
-                    <img src="certificate/c1.jpg.jpg" class="img-fluid" alt="Certificate 1">
+
+                    <img src="certificate/c1.jpg.jpg"
+                        class="img-fluid"
+                        alt="Certificate">
+
+                    <div class="certificate-content">
+
+                        <h5>Data Analytics</h5>
+
+                        <p class="text-secondary">
+                            Advance Certification
+                        </p>
+
+                        <div class="d-flex gap-2">
+
+                            <button
+                                class="btn btn-primary w-50 view-btn"
+                                data-img="certificate/c1.jpg.jpg">
+
+                                <i class="bi bi-eye-fill"></i>
+
+                                View
+
+                            </button>
+
+                            <button
+
+                                class="btn btn-outline-light w-50 desc-btn"
+
+                                data-title="Data Analytics"
+
+                                data-provider="Ira Skills"
+
+                                data-date="24 December 2025"
+
+                                data-description="Successfully completed a 250+ hour professional certification focused on MS Excel, Power BI, and data visualization, gaining practical skills to analyze data and create meaningful business insights.">
+
+                                <i class="bi bi-file-earmark-text"></i>
+
+                                Details
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
 
-            <div class="col-lg-4 col-md-6">
-                <div class="certificate-card">
-                    <img src="certificate/c2.jpg.jpg" class="img-fluid" alt="Certificate 2">
-                </div>
-            </div>
+            <!-- Certificate 2 -->
 
             <div class="col-lg-4 col-md-6">
+
                 <div class="certificate-card">
-                    <img src="certificate/c3.jpg.png" class="img-fluid" alt="Certificate 3">
+
+                    <img src="certificate/c2.jpg.jpg"
+                        class="img-fluid"
+                        alt="Certificate">
+
+                    <div class="certificate-content">
+
+                        <h5>World Book Day eQuiz</h5>
+
+                        <p class="text-secondary">
+                            Academic Achievement
+                        </p>
+
+                        <div class="d-flex gap-2">
+
+                            <button
+                                class="btn btn-primary w-50 view-btn"
+                                data-img="certificate/c2.jpg.jpg">
+
+                                View
+
+                            </button>
+
+                            <button
+
+                                class="btn btn-outline-light w-50 desc-btn"
+
+                                data-title="Academic Achievement"
+
+                                data-provider="Anjuman-I-Islam's Kalsekar Technical Campus"
+
+                                data-date="23 - 30 April 2026"
+
+                                data-description="Received a Certificate of Participation in recognition of outstanding performance, achieving a 90% score in the AIKTC eQuiz Competition held to commemorate World Book & Copyright Day and World Intellectual Property Day.">
+
+                                Details
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
 
-            <div class="col-lg-4 col-md-6">
-                <div class="certificate-card">
-                    <img src="certificate/c4.jpg.jpg" class="img-fluid" alt="Certificate 4">
-                </div>
-            </div>
+            <!-- Certificate 3 -->
 
             <div class="col-lg-4 col-md-6">
-                <div class="certificate-card">
-                    <img src="certificate/c5.jpg.jpeg" class="img-fluid" alt="Certificate 5">
-                </div>
-            </div>
 
-            <div class="col-lg-4 col-md-6">
                 <div class="certificate-card">
-                    <img src="certificate/c6.jpg.jpeg" class="img-fluid" alt="Certificate 6">
+
+                    <img src="certificate/c3.jpg.png"
+                        class="img-fluid"
+                        alt="Certificate">
+
+                    <div class="certificate-content">
+
+                        <h5>Cyber Security</h5>
+
+                        <p class="text-secondary">
+                            Beginner Course
+                        </p>
+
+                        <div class="d-flex gap-2">
+
+                            <button
+                                class="btn btn-primary w-50 view-btn"
+                                data-img="certificate/c3.jpg.png">
+
+                                View
+
+                            </button>
+
+                            <button
+
+                                class="btn btn-outline-light w-50 desc-btn"
+
+                                data-title="Cyber Security"
+
+                                data-provider="Cisco"
+
+                                data-date="2026"
+
+                                data-description="Completed Cyber Security basics including networking, threats, malware, phishing, encryption and online safety.">
+
+                                Details
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
 
         </div>
@@ -1881,6 +2007,92 @@
     </div>
 
 </section>
+
+<!-- ===========================
+        VIEW MODAL
+============================ -->
+
+<div
+class="modal fade"
+id="certificateModal"
+tabindex="-1">
+
+<div class="modal-dialog modal-xl modal-dialog-centered">
+
+<div class="modal-content bg-dark">
+
+<div class="modal-header border-secondary">
+
+<h5 class="text-white">
+
+Certificate Preview
+
+</h5>
+
+<button
+class="btn-close btn-close-white"
+data-bs-dismiss="modal">
+</button>
+
+</div>
+
+<div class="modal-body text-center">
+
+<img
+id="certificateImage"
+class="img-fluid rounded">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===========================
+        DETAILS PANEL
+============================ -->
+
+<div
+class="offcanvas offcanvas-end bg-dark text-white"
+tabindex="-1"
+id="certificateDetails">
+
+<div class="offcanvas-header">
+
+<h4 id="certificateTitle"></h4>
+
+<button
+class="btn-close btn-close-white"
+data-bs-dismiss="offcanvas">
+</button>
+
+</div>
+
+<div class="offcanvas-body">
+
+<h6 class="text-primary">
+Provider
+</h6>
+
+<p id="certificateProvider"></p>
+
+<h6 class="text-primary">
+Completion Date
+</h6>
+
+<p id="certificateDate"></p>
+
+<h6 class="text-primary">
+Description
+</h6>
+
+<p id="certificateDescription"></p>
+
+</div>
+
+</div>
 
 <!-- =========================================
                 CONTACT SECTION
